@@ -22,7 +22,7 @@ def index():
         verifyerror = ''
 
         if email:
-            if '@' not in email or '.' not in email or len(email) < 3 or len(email) > 20 or ' ' in email:
+            if '@' not in email or '.' not in email or email.count('@') > 1 or email.count('.') > 1 or len(email) < 3 or len(email) > 20 or ' ' in email:
                 emailerror = "That is an invalid email"
 
         if not username or len(username) < 3 or len(username) > 20 or ' ' in username:
