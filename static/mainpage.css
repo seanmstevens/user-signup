@@ -108,7 +108,7 @@ div.wrapper {
     text-decoration: none;
 }
 
-#github:link, #github:visited {
+#github-link:link, #github-link:visited {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     color: #00be9c;
@@ -116,6 +116,6 @@ div.wrapper {
     transition: color 120ms ease-in;
 }
 
-#github:hover, #github:visited:hover {
+#github-link:hover, #github-link:visited:hover {
     color: #1a9a83;
 }
