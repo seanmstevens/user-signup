@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-body {
-    font-family: "Roboto", sans-serif;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -14,15 +16,20 @@ table {
     margin-top: 15px;
 }
 
+div.wrapper {
+    display: table;
+    height: 100%;
+    margin: 0 auto;
+}
+
 .signup-container {
-    margin: auto;
-    margin-top: 18vh;
-    width: 340px;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 50% auto;
+    font-family: "Roboto", sans-serif;
     padding: 30px;
-    border-radius: 6px;
     background-color: #eeeff3;
-    box-shadow: 0 0 4px #4f4f4f;
-    color: #b4bbcb;
+    box-shadow: 0 0 4px #9c9c9c;
 }
 
 .signup-field {
