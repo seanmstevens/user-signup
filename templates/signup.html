@@ -2,50 +2,38 @@
 
 {% block content %}
 <div class = 'signup-container'>
-<h1>Signup</h1>
+<h1>Sign Up</h1>
 <hr/>
 <form method = 'POST'>
     <table>
         <tbody>
             <tr>
                 <td>
-                    <label for = 'username'>Username</label>
-                </td>
-                <td>
-                    <input type = 'text' name = 'username' value = '{{ username }}'/>
+                    <input class = 'signup-field' type = 'text' placeholder = 'Username' name = 'username' value = '{{ username }}'/>
                     <span class = 'error'>{{ usererror }}</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for = "password">Password</label>
-                </td>
-                <td>
-                    <input type = 'password' name = 'password'/>
+                    <input class = 'signup-field' type = 'password' placeholder = 'Password' name = 'password'/>
                     <span class = 'error'>{{ passerror }}</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for = "verify">Verify Password</label>
-                </td>
-                <td>
-                    <input type = 'password' name = 'verify'/>
+                    <input class = 'signup-field' type = 'password' placeholder = 'Verify Password' name = 'verify'/>
                     <span class = 'error'>{{ verifyerror }}</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for = "email">Email (optional)</label>
-                </td>
-                <td>
-                    <input type = 'text' name = 'email' value = '{{ email }}'/>
+                    <input class = 'signup-field' type = 'text' placeholder = 'Email (Optional)' name = 'email' value = '{{ email }}'/>
                     <span class = 'error'>{{ emailerror }}</span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <input type = 'submit'/>
+                    <input class = "submit-button" type = 'submit' value = "Sign up"/>
                 </td>
             </tr>
         </tbody>

@@ -23,16 +23,16 @@ def index():
 
         if email:
             if '@' not in email or '.' not in email or email.count('@') > 1 or email.count('.') > 1 or len(email) < 3 or len(email) > 20 or ' ' in email:
-                emailerror = "That is an invalid email"
+                emailerror = "That is an invalid email."
 
         if not username or len(username) < 3 or len(username) > 20 or ' ' in username:
-            usererror = "That's not a valid username"
+            usererror = "That's not a valid username."
 
         if not password or len(password) < 3 or len(password) > 20 or ' ' in password:
-            passerror = "That's not a valid password"
+            passerror = "That's not a valid password."
 
         if not verify or verify != password:
-            verifyerror = "Passwords do not match"
+            verifyerror = "Passwords do not match."
 
         if not emailerror and not usererror and not passerror and not verifyerror:
             return redirect('/welcome?username={0}'.format(username))
