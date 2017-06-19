@@ -90,10 +90,9 @@ div.wrapper {
 }
 
 .welcome-container {
-    position: relative;
-    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
-    margin-top: 40vh;
 }
 
 .welcome-text {
