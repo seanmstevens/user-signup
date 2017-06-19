@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
 html, body {
     height: 100%;
@@ -9,6 +9,7 @@ html, body {
 h1 {
     color: #6f7c7e;
     letter-spacing: 0.07em;
+    font-weight: 300;
 }
 
 table {
@@ -39,15 +40,14 @@ div.wrapper {
     font-family: "Roboto", sans-serif;
     border: 2px solid transparent;
     margin: 10px 0 10px;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 1em;
     color: #787d88;
     background-color: #fff;
     padding: 10px 18px;
     border-radius: 6px;
     transition: border 120ms ease-in;
 }
-
-
 
 .signup-field::placeholder {
     color: #c3c8d5;
@@ -63,7 +63,7 @@ div.wrapper {
     background-color: #00be9c;
     width: 330px;
     margin: 30px 0 10px;
-    font-weight: bold;
+    font-weight: 500;
     border-radius: 6px;
     font-size: 1.1em;
     padding: 14px 18px;
@@ -98,5 +98,22 @@ div.wrapper {
 .welcome-text {
     color: #00be9c;
     font-family: "Roboto", sans-serif;
+    font-weight: 500;
     font-size: 4rem;
+}
+
+#copyright {
+    font-size: 0.8em;
+    text-align: center;
+    text-decoration: none;
+}
+
+#github:link, #github:visited {
+    color: #00be9c;
+    text-decoration: none;
+    transition: color 120ms ease-in;
+}
+
+#github:hover, #github:visited:hover {
+    color: #1a9a83;
 }
