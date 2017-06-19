@@ -25,7 +25,9 @@ div.wrapper {
 .signup-container {
     display: table-cell;
     vertical-align: middle;
-    margin: 50% auto;
+}
+
+.form-container {
     font-family: "Roboto", sans-serif;
     padding: 30px;
     background-color: #eeeff3;

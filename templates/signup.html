@@ -2,45 +2,46 @@
 
 {% block content %}
 <div class = "wrapper">
-<div class = 'signup-container'>
-<h1>Sign Up</h1>
-<hr/>
-<form method = 'POST'>
-    <table>
-        <tbody>
-            <tr>
-                <td>
-                    <input class = 'signup-field' type = 'text' placeholder = 'Username' name = 'username' value = '{{ username }}'/>
-                    <span class = 'error'>{{ usererror }}</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class = 'signup-field' type = 'password' placeholder = 'Password' name = 'password'/>
-                    <span class = 'error'>{{ passerror }}</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class = 'signup-field' type = 'password' placeholder = 'Verify Password' name = 'verify'/>
-                    <span class = 'error'>{{ verifyerror }}</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class = 'signup-field' type = 'text' placeholder = 'Email (Optional)' name = 'email' value = '{{ email }}'/>
-                    <span class = 'error'>{{ emailerror }}</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input class = "submit-button" type = 'submit' value = "Sign up"/>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</form>
+    <div class = 'signup-container'>
+        <div class = "form-container">
+            <h1>Sign Up</h1>
+            <hr/>
+            <form method = 'POST'>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class = 'signup-field' type = 'text' placeholder = 'Username' name = 'username' value = '{{ username }}'/>
+                                <span class = 'error'>{{ usererror }}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class = 'signup-field' type = 'password' placeholder = 'Password' name = 'password'/>
+                                <span class = 'error'>{{ passerror }}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class = 'signup-field' type = 'password' placeholder = 'Verify Password' name = 'verify'/>
+                                <span class = 'error'>{{ verifyerror }}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class = 'signup-field' type = 'text' placeholder = 'Email (Optional)' name = 'email' value = '{{ email }}'/>
+                                <span class = 'error'>{{ emailerror }}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class = "submit-button" type = 'submit' value = "Sign up"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
 </div>
-</div>
-
 {% endblock %}
