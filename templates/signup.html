@@ -12,25 +12,45 @@
                         <tr>
                             <td>
                                 <input class = 'signup-field' type = 'text' placeholder = 'Username' name = 'username' value = '{{ username }}'/>
-                                <span class = 'error'>{{ usererror }}</span>
+                                {% if usererror %}
+                                    <span class = 'error'>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        {{ usererror }}
+                                    </span>
+                                {% endif %}
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <input class = 'signup-field' type = 'password' placeholder = 'Password' name = 'password'/>
-                                <span class = 'error'>{{ passerror }}</span>
+                                {% if passerror %}
+                                    <span class = 'error'>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        {{ passerror }}
+                                    </span>
+                                {% endif %}
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <input class = 'signup-field' type = 'password' placeholder = 'Verify Password' name = 'verify'/>
-                                <span class = 'error'>{{ verifyerror }}</span>
+                                {% if verifyerror %}
+                                    <span class = 'error'>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        {{ verifyerror }}
+                                    </span>
+                                {% endif %}
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <input class = 'signup-field' type = 'text' placeholder = 'Email (Optional)' name = 'email' value = '{{ email }}'/>
-                                <span class = 'error'>{{ emailerror }}</span>
+                                {% if emailerror %}
+                                    <span class = 'error'>
+                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                                        {{ emailerror }}
+                                    </span>
+                                {% endif %}
                             </td>
                         </tr>
                         <tr>
