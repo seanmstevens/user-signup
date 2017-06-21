@@ -13,14 +13,8 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), aut
 def index():
 
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        verify = request.form['verify']
-        email = request.form['email']
-        emailerror = ''
-        usererror = ''
-        passerror = ''
-        verifyerror = ''
+        username, password, verify, email = request.form['username'], request.form['password'], request.form['verify'], request.form['email']
+        emailerror, usererror, passerror, verifyerror = '', '', '', ''
 
         if email:
             if not re.match(r'[^@]+@[^@]+\.[^@\.]+', email) or len(email) < 3 or len(email) > 20 or ' ' in email:
