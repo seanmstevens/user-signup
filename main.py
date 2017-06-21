@@ -14,7 +14,7 @@ def index():
 
     if request.method == 'POST':
         username, password, verify, email = request.form['username'], request.form['password'], request.form['verify'], request.form['email']
-        emailerror, usererror, passerror, verifyerror = '', '', '', ''
+        emailerror = usererror = passerror = verifyerror = ''
 
         if email:
             if not re.match(r'[^@]+@[^@]+\.[^@\.]+', email) or len(email) < 3 or len(email) > 20 or ' ' in email:
@@ -32,15 +32,15 @@ def index():
         if not emailerror and not usererror and not passerror and not verifyerror:
             return redirect('/welcome?username={0}'.format(username))
         else:
-            return render_template('signup.html', username = username,
+            return render_template('signup.html', title = "User Signup", username = username,
             email = email, emailerror = emailerror, usererror = usererror,
             passerror = passerror, verifyerror = verifyerror)
 
-    return render_template('signup.html')
+    return render_template('signup.html', title = "User Signup")
 
 @app.route('/welcome')
 def welcome():
     username = request.args.get('username')
-    return render_template('welcome.html', username = username)
+    return render_template('welcome.html', title = "Welcome", username = username)
 
 app.run()
