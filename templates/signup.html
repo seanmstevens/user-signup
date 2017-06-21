@@ -11,7 +11,8 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input class = 'signup-field' type = 'text' placeholder = 'Username' name = 'username' value = '{{ username }}'/>
+                                <input class = 'signup-field {% if usererror %}error-border{% endif %}'
+                                 type = 'text' placeholder = 'Username' name = 'username' value = '{{ username }}'/>
                                 {% if usererror %}
                                     <span class = 'error'>
                                         <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -22,7 +23,8 @@
                         </tr>
                         <tr>
                             <td>
-                                <input class = 'signup-field' type = 'password' placeholder = 'Password' name = 'password'/>
+                                <input class = 'signup-field {% if passerror %}error-border{% endif %}' 
+                                type = 'password' placeholder = 'Password' name = 'password'/>
                                 {% if passerror %}
                                     <span class = 'error'>
                                         <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -33,7 +35,8 @@
                         </tr>
                         <tr>
                             <td>
-                                <input class = 'signup-field' type = 'password' placeholder = 'Verify Password' name = 'verify'/>
+                                <input class = 'signup-field {% if verifyerror %}error-border{% endif %}' 
+                                type = 'password' placeholder = 'Verify Password' name = 'verify'/>
                                 {% if verifyerror %}
                                     <span class = 'error'>
                                         <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -44,7 +47,8 @@
                         </tr>
                         <tr>
                             <td>
-                                <input class = 'signup-field' type = 'text' placeholder = 'Email (Optional)' name = 'email' value = '{{ email }}'/>
+                                <input class = 'signup-field {% if emailerror %}error-border{% endif %}' 
+                                type = 'text' placeholder = 'Email (Optional)' name = 'email' value = '{{ email }}'/>
                                 {% if emailerror %}
                                     <span class = 'error'>
                                         <i class="fa fa-exclamation-circle" aria-hidden="true"></i>

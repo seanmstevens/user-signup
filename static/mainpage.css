@@ -50,6 +50,10 @@ div.wrapper {
     transition: border 120ms ease-in;
 }
 
+.error-border {
+    border-color: #d9534f;
+}
+
 .signup-field::placeholder {
     color: #c3c8d5;
 }
