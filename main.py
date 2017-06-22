@@ -13,11 +13,12 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), aut
 def index():
 
     if request.method == 'POST':
-        username, password, verify, email = request.form['username'], request.form['password'], request.form['verify'], request.form['email']
+        username, password, verify, email = (request.form['username'], request.form['password'],
+                                             request.form['verify'], request.form['email'])
         emailerror = usererror = passerror = verifyerror = ''
 
         if email:
-            if not re.match(r'[^@]+@[^@]+\.[^@\.]+', email) or len(email) < 3 or len(email) > 20 or ' ' in email:
+            if not re.match(r'[^@]+@[^@\.]+\.[^@\.]+', email) or len(email) < 3 or len(email) > 20 or ' ' in email:
                 emailerror = "That is an invalid email."
 
         if not username or len(username) < 3 or len(username) > 20 or ' ' in username:
