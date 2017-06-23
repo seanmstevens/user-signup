@@ -13,9 +13,16 @@ h1 {
     margin-top: 0;
 }
 
-table {
+form {
     width: 340px;
     margin-top: 15px;
+}
+
+hr {
+    position: relative;
+    border: 1px solid #acc1c4;
+    margin: 0;
+    width: 330px;
 }
 
 div.wrapper {
@@ -40,7 +47,7 @@ div.wrapper {
     width: 290px;
     font-family: "Roboto", sans-serif;
     border: 2px solid transparent;
-    margin: 10px 0 10px;
+    margin: 12px 0 12px;
     font-weight: 500;
     font-size: 1em;
     color: #787d88;
@@ -70,10 +77,13 @@ div.wrapper {
     margin: 30px 0 10px;
     font-weight: 500;
     border-radius: 6px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #147765;
     font-size: 1.1em;
     padding: 14px 18px;
     color: #FFF;
-    border: none;
     transition: background 120ms ease-in;
 }
 

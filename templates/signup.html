@@ -7,63 +7,39 @@
             <h1>Sign Up</h1>
             <hr/>
             <form method = 'POST'>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <input class = 'signup-field {% if usererror %}error-border{% endif %}'
-                                 type = 'text' placeholder = 'Username' name = 'username' value = '{{ username }}'/>
-                                {% if usererror %}
-                                    <span class = 'error'>
-                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                        {{ usererror }}
-                                    </span>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input class = 'signup-field {% if passerror %}error-border{% endif %}' 
-                                type = 'password' placeholder = 'Password' name = 'password'/>
-                                {% if passerror %}
-                                    <span class = 'error'>
-                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                        {{ passerror }}
-                                    </span>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input class = 'signup-field {% if verifyerror %}error-border{% endif %}' 
-                                type = 'password' placeholder = 'Verify Password' name = 'verify'/>
-                                {% if verifyerror %}
-                                    <span class = 'error'>
-                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                        {{ verifyerror }}
-                                    </span>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input class = 'signup-field {% if emailerror %}error-border{% endif %}' 
-                                type = 'text' placeholder = 'Email (Optional)' name = 'email' value = '{{ email }}'/>
-                                {% if emailerror %}
-                                    <span class = 'error'>
-                                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                                        {{ emailerror }}
-                                    </span>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input class = "submit-button" type = 'submit' value = "Sign up"/>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <input class = 'signup-field {% if usererror %}error-border{% endif %}'
+                type = 'text' placeholder = 'Username' name = 'username' value = '{{ username }}'/>
+                {% if usererror %}
+                    <span class = 'error'>
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        {{ usererror }}
+                    </span>
+                {% endif %}
+                <input class = 'signup-field {% if passerror %}error-border{% endif %}' 
+                type = 'password' placeholder = 'Password' name = 'password'/>
+                {% if passerror %}
+                    <span class = 'error'>
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        {{ passerror }}
+                    </span>
+                {% endif %}
+                <input class = 'signup-field {% if verifyerror %}error-border{% endif %}' 
+                type = 'password' placeholder = 'Verify Password' name = 'verify'/>
+                {% if verifyerror %}
+                    <span class = 'error'>
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        {{ verifyerror }}
+                    </span>
+                {% endif %}
+                <input class = 'signup-field {% if emailerror %}error-border{% endif %}' 
+                type = 'text' placeholder = 'Email (Optional)' name = 'email' value = '{{ email }}'/>
+                {% if emailerror %}
+                    <span class = 'error'>
+                        <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                        {{ emailerror }}
+                    </span>
+                {% endif %}
+                <input class = "submit-button" type = 'submit' value = "Sign up"/>
             </form>
         </div>
         <p id = "copyright"><a target = "_blank" id = "github-link"
